@@ -2,7 +2,7 @@
 (function(){
 var $=function(i){return document.getElementById(i);},q="",io=null;
 function e(t,c,x){var n=document.createElement(t);if(c)n.className=c;if(x!=null)n.textContent=x;return n;}
-function pic(i){var m=e("img");m.src=MN.img(i);m.alt=MN.pick(i,"name");m.loading="lazy";return m;}
+function pic(i,w){var m=e("img");m.src=MN.img(i,w);m.alt=MN.pick(i,"name");m.loading="lazy";return m;}
 function render(){
  var D=MN.data,R=D.restaurant;
  $("nm").textContent=MN.pick(R,"name");$("tg").textContent=MN.pick(R,"tagline");document.title=MN.pick(R,"name");
@@ -10,7 +10,7 @@ function render(){
  var pop=D.items.filter(function(i){return i.popular&&i.available!==false;});
  $("pop").hidden=!pop.length;$("popT").textContent=MN.t("popular");
  var sn=$("snap");sn.textContent="";
- pop.forEach(function(i){var b=e("button","pc");b.appendChild(pic(i));var n=e("div","in");n.appendChild(e("b","",MN.pick(i,"name")));n.appendChild(e("span","price",MN.money(i.price)));b.appendChild(n);b.onclick=function(){openDish(i);};sn.appendChild(b);});
+ pop.forEach(function(i){var b=e("button","pc");b.appendChild(pic(i,340));var n=e("div","in");n.appendChild(e("b","",MN.pick(i,"name")));n.appendChild(e("span","price",MN.money(i.price)));b.appendChild(n);b.onclick=function(){openDish(i);};sn.appendChild(b);});
  var nav=$("cats");nav.textContent="";
  D.categories.forEach(function(c){var b=e("button","",MN.pick(c,"name"));b.dataset.id=c.id;b.onclick=function(){var s=$("c-"+c.id);if(s)s.scrollIntoView({behavior:"smooth",block:"start"});};nav.appendChild(b);});
  list();
@@ -22,7 +22,7 @@ function list(){
   if(!its.length)return;n+=its.length;
   var sec=e("section","sec");sec.id="c-"+c.id;sec.dataset.id=c.id;sec.appendChild(e("h2","sec-h",MN.pick(c,"name")));
   its.forEach(function(i){
-   var off=i.available===false,b=e("button","row"+(off?" off":""));b.appendChild(pic(i));
+   var off=i.available===false,b=e("button","row"+(off?" off":""));b.appendChild(pic(i,200));
    var t=e("div","tx");t.appendChild(e("b","",MN.pick(i,"name")));t.appendChild(e("p","",MN.pick(i,"desc")));
    t.appendChild(e("span","price",off?MN.t("soldOut"):MN.money(i.price)));b.appendChild(t);b.onclick=function(){openDish(i);};sec.appendChild(b);
   });
@@ -41,7 +41,7 @@ function observe(){
  if(btns[0])btns[0].classList.add("on");
 }
 function openDish(i){
- var d=$("dlg");d.textContent="";var w=e("div","sh"),m=pic(i);m.className="big";w.appendChild(m);
+ var d=$("dlg");d.textContent="";var w=e("div","sh"),m=pic(i,900);m.className="big";w.appendChild(m);
  var x=e("button","x","✕");x.setAttribute("aria-label",MN.t("close"));x.onclick=function(){d.close();};w.appendChild(x);
  var b=e("div","bd"),h=e("div","hd");h.appendChild(e("h3","",MN.pick(i,"name")));h.appendChild(e("span","price",i.available===false?MN.t("soldOut"):MN.money(i.price)));b.appendChild(h);
  if(MN.pick(i,"desc"))b.appendChild(e("p","",MN.pick(i,"desc")));

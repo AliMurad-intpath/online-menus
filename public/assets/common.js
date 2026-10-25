@@ -17,7 +17,7 @@ var MN=window.MN={data:null,cb:null,
  t:function(k){return (T[lang]&&T[lang][k])||T.en[k]||k;},
  pick:function(o,k){return o[k+"_"+lang]||o[k+"_en"]||o[k+"_ar"]||"";},
  money:function(v){var r=MN.data.restaurant,c=lang==="ar"?(r.currency_ar||r.currency_en):r.currency_en;return c+" "+Number(v||0).toLocaleString("en",{maximumFractionDigits:2});},
- img:function(i){return i.image||"/images/placeholder.svg";},
+ img:function(i,w){var s=i.image||"/images/placeholder.svg";if(!w||/\.svg(\?|$)/i.test(s)||/^https?:/i.test(s)||/^(localhost|127\.|192\.168\.)/.test(location.hostname))return s;return "/.netlify/images?url="+encodeURIComponent(s)+"&w="+w;},
  setLang:function(l){lang=l;try{localStorage.setItem("lang",l);}catch(e){}apply();if(MN.cb&&MN.data)MN.cb();},
  toggle:function(){MN.setLang(lang==="ar"?"en":"ar");},
  start:function(cb){MN.cb=cb;fetch("/content/menu.json",{cache:"no-cache"}).then(function(r){return r.json();}).then(function(d){MN.data=d;cb();}).catch(function(){document.body.textContent="Couldn’t load the menu. Please refresh.";});}

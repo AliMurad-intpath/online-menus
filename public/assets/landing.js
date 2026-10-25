@@ -16,7 +16,7 @@ function render(){
  $("hint").textContent=open?(just?MN.t("thanks"):""):MN.t("hintLocked");
  $("sk").hidden=open||R.skip===false;
  var f=$("fan");
- if(!f.children.length){D.items.filter(function(i){return i.popular;}).slice(0,3).forEach(function(i){var im=document.createElement("img");im.src=MN.img(i);im.alt="";f.appendChild(im);});}
+ if(!f.children.length){D.items.filter(function(i){return i.popular;}).slice(0,3).forEach(function(i){var im=document.createElement("img");im.src=MN.img(i,200);im.alt="";f.appendChild(im);});}
 }
 function unlock(){if(!MN.data)return;var lock=MN.data.restaurant.lock!==false;if(!lock||ok||!pend||Date.now()-pend<2500)return;ok=true;just=true;pend=0;try{localStorage.setItem(key(),"1");}catch(e){}render();}
 $("ig").addEventListener("click",function(){pend=Date.now();});
