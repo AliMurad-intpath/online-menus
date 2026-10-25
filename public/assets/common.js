@@ -17,7 +17,12 @@ var MN=window.MN={data:null,cb:null,
  langLabel:function(){return lang==="ar"?"English":"عربي";},
  t:function(k){return (T[lang]&&T[lang][k])||T.en[k]||k;},
  pick:function(o,k){return o[k+"_"+lang]||o[k+"_en"]||o[k+"_ar"]||"";},
- money:function(v){var r=MN.data.restaurant,c=lang==="ar"?(r.currency_ar||r.currency_en):r.currency_en;return c+" "+Number(v||0).toLocaleString("en",{maximumFractionDigits:2});},
+ money:function(v){var r=MN.data.restaurant,n=Number(v||0).toLocaleString("en",{maximumFractionDigits:2});
+  /* Arabic reads number first, then currency: 5,000 د.ع (logical order, so it also displays correctly in RTL) */
+  if(lang==="ar")return n+"\u00A0"+(r.currency_ar||r.currency_en);
+  return r.currency_en+"\u00A0"+n;},
+ showLabels:function(){return !MN.data||MN.data.restaurant.show_labels!==false;},
+ label:function(id){var L=(MN.data&&MN.data.labels)||[];for(var k=0;k<L.length;k++)if(L[k].id===id)return MN.pick(L[k],"name");var t=T[lang]["tag_"+id];return t||"";},
  img:function(i,w){var s=i.image||"/images/placeholder.svg";if(!w||/\.svg(\?|$)/i.test(s)||/^https?:/i.test(s)||/^(localhost|127\.|192\.168\.)/.test(location.hostname))return s;return "/.netlify/images?url="+encodeURIComponent(s)+"&w="+w;},
  setLang:function(l){lang=l;try{localStorage.setItem("lang",l);}catch(e){}apply();if(MN.cb&&MN.data)MN.cb();},
  toggle:function(){MN.setLang(lang==="ar"?"en":"ar");},

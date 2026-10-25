@@ -30,6 +30,7 @@ collections:
               - {label: Currency symbol (Arabic), name: currency_ar, widget: string, default: "$"}
               - {label: Lock the menu button until the guest follows, name: lock, widget: boolean, default: true}
               - {label: Show a "skip" link, name: skip, widget: boolean, default: true}
+              - {label: Show labels on dishes (Spicy, Vegan...), name: show_labels, widget: boolean, default: true, hint: "Turn off to hide all labels on the menu."}
           - label: Instagram pop-up
             name: popup
             widget: object
@@ -46,6 +47,16 @@ collections:
               - {label: Follow button text (Arabic), name: button_ar, widget: string}
               - {label: Dismiss link text (English), name: later_en, widget: string}
               - {label: Dismiss link text (Arabic), name: later_ar, widget: string}
+          - label: Labels (Spicy, Vegan...)
+            name: labels
+            widget: list
+            collapsed: true
+            summary: "{{fields.name_en}} / {{fields.name_ar}}"
+            hint: "Add, rename or delete labels. Then pick them on each dish under Labels. Deleting a label removes it from the menu."
+            fields:
+              - {label: Short code (lowercase, no spaces, never change it later), name: id, widget: string, pattern: ["^[a-z0-9-]+$", "Lowercase letters, numbers and dashes only"]}
+              - {label: Name (English), name: name_en, widget: string}
+              - {label: Name (Arabic), name: name_ar, widget: string}
           - label: Categories
             name: categories
             widget: list
@@ -75,10 +86,15 @@ collections:
               - {label: Photo, name: image, widget: image, required: false, hint: "Any JPG or PNG up to about 2 MB. The site resizes it automatically. To replace it, click Choose different image."}
               - label: Labels
                 name: tags
-                widget: select
+                widget: relation
+                collection: menu
+                file: menu
                 multiple: true
                 required: false
-                options: [{label: Vegan, value: vegan}, {label: Vegetarian, value: vegetarian}, {label: Gluten-free, value: glutenfree}, {label: Spicy, value: spicy}, {label: New, value: new}]
+                search_fields: ["labels.*.name_en"]
+                value_field: "labels.*.id"
+                display_fields: ["labels.*.name_en"]
+                hint: "Optional. Manage the list of labels in the Labels section above."
               - label: Allergens
                 name: allergens
                 widget: select

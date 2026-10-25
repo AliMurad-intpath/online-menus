@@ -9,7 +9,8 @@
     "currency_en": "IQD",
     "currency_ar": "د.ع",
     "skip": true,
-    "logo": "/images/logo.svg"
+    "logo": "/images/logo.svg",
+    "show_labels": true
   },
   "popup": {
     "enabled": true,
@@ -23,6 +24,33 @@
     "later_en": "Maybe later",
     "later_ar": "ربما لاحقاً"
   },
+  "labels": [
+    {
+      "id": "vegan",
+      "name_en": "Vegan",
+      "name_ar": "نباتي بالكامل"
+    },
+    {
+      "id": "vegetarian",
+      "name_en": "Vegetarian",
+      "name_ar": "نباتي"
+    },
+    {
+      "id": "glutenfree",
+      "name_en": "Gluten-free",
+      "name_ar": "خالٍ من الغلوتين"
+    },
+    {
+      "id": "spicy",
+      "name_en": "Spicy",
+      "name_ar": "حار"
+    },
+    {
+      "id": "new",
+      "name_en": "New",
+      "name_ar": "جديد"
+    }
+  ],
   "categories": [
     {
       "id": "burgers",

@@ -39,7 +39,7 @@ function list(){
   its.forEach(function(i){
    var off=i.available===false,b=e("button","card"+(off?" off":""));b.type="button";
    var ph=e("span","ph");ph.appendChild(pic(i,400));
-   if(!off&&i.tags&&i.tags.length)ph.appendChild(e("span","bdg",MN.t("tag_"+i.tags[0])));
+   if(!off&&MN.showLabels()&&i.tags&&i.tags.length){var lb=MN.label(i.tags[0]);if(lb)ph.appendChild(e("span","bdg",lb));}
    b.appendChild(ph);
    var t=e("span","ct");t.appendChild(e("b","",MN.pick(i,"name")));
    if(MN.pick(i,"desc"))t.appendChild(e("span","ds",MN.pick(i,"desc")));
@@ -62,10 +62,10 @@ function observe(){
 }
 function openDish(i){
  var d=$("dlg");d.textContent="";var w=e("div","sh"),m=pic(i,900);m.className="big";m.loading="eager";w.appendChild(m);
- var x=e("button","x","✕");x.type="button";x.setAttribute("aria-label",MN.t("close"));x.onclick=function(){d.close();};w.appendChild(x);
+ var x=e("button","x");x.innerHTML='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';x.type="button";x.setAttribute("aria-label",MN.t("close"));x.onclick=function(){d.close();};w.appendChild(x);
  var b=e("div","bd"),h=e("div","hd");h.appendChild(e("h3","",MN.pick(i,"name")));h.appendChild(e("span","price",i.available===false?MN.t("soldOut"):MN.money(i.price)));b.appendChild(h);
  if(MN.pick(i,"desc"))b.appendChild(e("p","",MN.pick(i,"desc")));
- var tg=e("div");(i.tags||[]).forEach(function(k){tg.appendChild(e("span","chip",MN.t("tag_"+k)));});b.appendChild(tg);
+ if(MN.showLabels()){var tg=e("div");(i.tags||[]).forEach(function(k){var lb=MN.label(k);if(lb)tg.appendChild(e("span","chip",lb));});if(tg.children.length)b.appendChild(tg);}
  if(i.allergens&&i.allergens.length)b.appendChild(e("p","al",MN.t("contains")+": "+i.allergens.map(function(k){return MN.t("al_"+k);}).join(MN.lang()==="ar"?"، ":", ")));
  w.appendChild(b);d.appendChild(w);d.showModal();
 }
@@ -76,7 +76,7 @@ function ppSkip(){try{return sessionStorage.getItem(SEEN)==="1"||localStorage.ge
 function ppText(k){var P=MN.data.popup||{};return MN.pick(P,k)||MN.t("pp_"+k);}
 function buildPopup(){
  var d=$("igp"),R=MN.data.restaurant;d.textContent="";
- var x=e("button","x","✕");x.type="button";x.setAttribute("aria-label",MN.t("close"));x.onclick=function(){d.close();};
+ var x=e("button","x");x.innerHTML='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';x.type="button";x.setAttribute("aria-label",MN.t("close"));x.onclick=function(){d.close();};
  var ic=e("div","pp-ic");ic.innerHTML='<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>';d.appendChild(ic);
  d.appendChild(e("h3","",ppText("title")));d.appendChild(e("p","",ppText("text")));
  var a=e("a","btn ig",ppText("button"));a.href="https://www.instagram.com/"+encodeURIComponent(R.instagram)+"/";a.target="_blank";a.rel="noopener";
