@@ -1,7 +1,7 @@
 # Copyright (c) 2026 Integrated Path for IT Solutions. All rights reserved.
 backend:
   name: github
-  repo: YOUR-GITHUB-USER/online-menus   # change this
+  repo: AliMurad-intpath/online-menus
   branch: main
 local_backend: true                   # lets you test with `npx decap-server`
 media_folder: public/images/dishes
