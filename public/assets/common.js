@@ -1,10 +1,10 @@
 /* Copyright (c) 2026 Integrated Path for IT Solutions. All rights reserved. */
 (function(){
 var T={
-en:{follow:"Follow us on Instagram",switchTo:"Switch to Arabic",menu:"View the menu",hintLocked:"Follow us first, then your menu unlocks",thanks:"Thanks for following! Enjoy your meal.",skip:"Skip and go to the menu",search:"Search the menu",popular:"Popular right now",soldOut:"Sold out",contains:"Contains",empty:"Nothing found.",close:"Close",
+en:{prev:"Previous",next:"Next",pp_title:"Enjoying the menu?",pp_text:"Follow us on Instagram for new dishes and special offers.",pp_button:"Follow us on Instagram",pp_later:"Maybe later",follow:"Follow us on Instagram",switchTo:"Switch to Arabic",menu:"View the menu",hintLocked:"Follow us first, then your menu unlocks",thanks:"Thanks for following! Enjoy your meal.",skip:"Skip and go to the menu",search:"Search the menu",popular:"Popular right now",soldOut:"Sold out",contains:"Contains",empty:"Nothing found.",close:"Close",
 tag_vegan:"Vegan",tag_vegetarian:"Vegetarian",tag_glutenfree:"Gluten-free",tag_spicy:"Spicy",tag_new:"New",
 al_gluten:"Gluten",al_dairy:"Dairy",al_eggs:"Eggs",al_nuts:"Nuts",al_peanuts:"Peanuts",al_fish:"Fish",al_shellfish:"Shellfish",al_soy:"Soy",al_sesame:"Sesame"},
-ar:{follow:"تابعنا على إنستغرام",switchTo:"التبديل إلى الإنجليزية",menu:"تصفّح القائمة",hintLocked:"تابعنا أولاً لتُفتح القائمة",thanks:"شكراً لمتابعتك! بالهناء والشفاء.",skip:"تخطَّ وانتقل إلى القائمة",search:"ابحث في القائمة",popular:"الأكثر طلباً",soldOut:"نفدت الكمية",contains:"يحتوي على",empty:"لا توجد نتائج.",close:"إغلاق",
+ar:{prev:"السابق",next:"التالي",pp_title:"أعجبتك القائمة؟",pp_text:"تابعنا على إنستغرام لتصلك أحدث الأطباق والعروض الخاصة.",pp_button:"تابعنا على إنستغرام",pp_later:"ربما لاحقاً",follow:"تابعنا على إنستغرام",switchTo:"التبديل إلى الإنجليزية",menu:"تصفّح القائمة",hintLocked:"تابعنا أولاً لتُفتح القائمة",thanks:"شكراً لمتابعتك! بالهناء والشفاء.",skip:"تخطَّ وانتقل إلى القائمة",search:"ابحث في القائمة",popular:"الأكثر طلباً",soldOut:"نفدت الكمية",contains:"يحتوي على",empty:"لا توجد نتائج.",close:"إغلاق",
 tag_vegan:"نباتي بالكامل",tag_vegetarian:"نباتي",tag_glutenfree:"خالٍ من الغلوتين",tag_spicy:"حار",tag_new:"جديد",
 al_gluten:"الغلوتين",al_dairy:"الألبان",al_eggs:"البيض",al_nuts:"المكسرات",al_peanuts:"الفول السوداني",al_fish:"السمك",al_shellfish:"القشريات",al_soy:"الصويا",al_sesame:"السمسم"}};
 var lang="";
@@ -14,6 +14,7 @@ function apply(){document.documentElement.lang=lang;document.documentElement.dir
 apply();
 var MN=window.MN={data:null,cb:null,
  lang:function(){return lang;},
+ langLabel:function(){return lang==="ar"?"English":"عربي";},
  t:function(k){return (T[lang]&&T[lang][k])||T.en[k]||k;},
  pick:function(o,k){return o[k+"_"+lang]||o[k+"_en"]||o[k+"_ar"]||"";},
  money:function(v){var r=MN.data.restaurant,c=lang==="ar"?(r.currency_ar||r.currency_en):r.currency_en;return c+" "+Number(v||0).toLocaleString("en",{maximumFractionDigits:2});},

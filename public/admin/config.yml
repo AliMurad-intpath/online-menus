@@ -30,6 +30,22 @@ collections:
               - {label: Currency symbol (Arabic), name: currency_ar, widget: string, default: "$"}
               - {label: Lock the menu button until the guest follows, name: lock, widget: boolean, default: true}
               - {label: Show a "skip" link, name: skip, widget: boolean, default: true}
+          - label: Instagram pop-up
+            name: popup
+            widget: object
+            collapsed: true
+            hint: "A small reminder that appears once per visit while a guest browses the menu."
+            fields:
+              - {label: Show the pop-up, name: enabled, widget: boolean, default: true}
+              - {label: Seconds before it appears, name: delay, widget: number, value_type: int, min: 3, max: 300, default: 10}
+              - {label: Title (English), name: title_en, widget: string}
+              - {label: Title (Arabic), name: title_ar, widget: string}
+              - {label: Message (English), name: text_en, widget: text}
+              - {label: Message (Arabic), name: text_ar, widget: text}
+              - {label: Follow button text (English), name: button_en, widget: string}
+              - {label: Follow button text (Arabic), name: button_ar, widget: string}
+              - {label: Dismiss link text (English), name: later_en, widget: string}
+              - {label: Dismiss link text (Arabic), name: later_ar, widget: string}
           - label: Categories
             name: categories
             widget: list

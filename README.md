@@ -13,6 +13,7 @@ Static site for Netlify. Pages: `/` (Instagram + menu buttons), `/menu/` (the me
 5. Open `/admin/`, log in, edit dishes, upload photos, press Publish. Netlify redeploys in about a minute.
 
 ## Notes
+- The Instagram reminder pop-up (text, delay, on/off) is edited in the CMS under Menu content > Instagram pop-up. It shows once per visit, never after a guest taps Follow.
 - Recipes live in `private/recipes/`, outside `public/`, so Netlify never serves them. Keep the repo private.
 - QR code: point it at your own domain (or a dynamic QR service), not the netlify.app address.
 - Test locally: `npx decap-server` and `npx serve public`, then open `/admin/`.
