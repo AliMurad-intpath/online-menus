@@ -33,9 +33,12 @@ function list(){
 }
 function observe(){
  if(io)io.disconnect();
- var btns=[].slice.call($("cats").children);
- io=new IntersectionObserver(function(es){es.forEach(function(x){if(!x.isIntersecting)return;btns.forEach(function(b){var on=b.dataset.id===x.target.dataset.id;b.classList.toggle("on",on);if(on)b.scrollIntoView({inline:"center",block:"nearest"});});});},{rootMargin:"-70px 0px -70% 0px"});
+ var nav=$("cats"),btns=[].slice.call(nav.children);
+ function fit(b){var n=nav.getBoundingClientRect(),r=b.getBoundingClientRect();if(r.left<n.left+8||r.right>n.right-8)nav.scrollBy({left:(r.left+r.width/2)-(n.left+n.width/2),behavior:"smooth"});}
+ function mark(id){btns.forEach(function(b){var on=b.dataset.id===id;b.classList.toggle("on",on);if(on)fit(b);});}
+ io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting)mark(x.target.dataset.id);});},{rootMargin:"-70px 0px -70% 0px"});
  [].forEach.call(document.querySelectorAll(".sec"),function(s){io.observe(s);});
+ if(btns[0])btns[0].classList.add("on");
 }
 function openDish(i){
  var d=$("dlg");d.textContent="";var w=e("div","sh"),m=pic(i);m.className="big";w.appendChild(m);

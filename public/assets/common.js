@@ -10,7 +10,7 @@ al_gluten:"الغلوتين",al_dairy:"الألبان",al_eggs:"البيض",al_n
 var lang="";
 try{lang=localStorage.getItem("lang")||"";}catch(e){}
 if(lang!=="ar"&&lang!=="en")lang=/^ar/i.test(navigator.language||"")?"ar":"en";
-function apply(){document.documentElement.lang=lang;document.documentElement.dir=lang==="ar"?"rtl":"ltr";var c=document.getElementById("cr");if(c){var y=new Date().getFullYear(),n="Integrated Path for IT Solutions";c.textContent=lang==="ar"?"جميع الحقوق محفوظة © "+y+" "+n:"© "+y+" "+n+". All rights reserved.";}}
+function apply(){document.documentElement.lang=lang;document.documentElement.dir=lang==="ar"?"rtl":"ltr";var c=document.getElementById("cr");if(c){var y=new Date().getFullYear();c.innerHTML='<span dir="ltr">\u00A9 '+y+' Integrated Path for IT Solutions</span><span>'+(lang==="ar"?"جميع الحقوق محفوظة":"All rights reserved.")+"</span>";}}
 apply();
 var MN=window.MN={data:null,cb:null,
  lang:function(){return lang;},
