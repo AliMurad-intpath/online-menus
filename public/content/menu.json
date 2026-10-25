@@ -8,7 +8,8 @@
     "tagline_en": "Mediterranean kitchen",
     "name_en": "Maison Olive",
     "skip": true,
-    "currency_ar": "د.ع"
+    "currency_ar": "د.ع",
+    "logo": "/images/logo.svg"
   },
   "categories": [
     {

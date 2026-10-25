@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Logo placeholder">
+  <circle cx="100" cy="100" r="94" fill="#F4C430"/>
+  <circle cx="100" cy="100" r="82" fill="none" stroke="#0F3B47" stroke-width="3"/>
+  <text x="100" y="124" text-anchor="middle" font-family="Georgia,serif" font-size="78" font-weight="700" fill="#0F3B47">MO</text>
+</svg>

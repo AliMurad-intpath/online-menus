@@ -50,11 +50,10 @@ body.land{--ink:#fff;--mut:#B8D3D6;min-height:100svh;background:radial-gradient(
 .corner{position:absolute;top:calc(12px + env(safe-area-inset-top));inset-inline-start:14px;background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.25);color:#fff}
 .mid{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:56px 20px 12px;text-align:center}
 .mid .tg{margin:-4px 0 10px}
-.fan{display:flex;justify-content:center;margin-bottom:6px}
-.fan img{width:72px;height:72px;border-radius:50%;object-fit:cover;border:3px solid #0F3B47;margin-inline:-8px;animation:fan .9s cubic-bezier(.2,.8,.2,1) both}
-.fan img:nth-child(2){width:92px;height:92px;z-index:1;animation-delay:.12s}
-.fan img:nth-child(3){animation-delay:.24s}
-@keyframes fan{from{opacity:0;transform:translateY(20px) scale(.5)}}
+.logo{display:flex;justify-content:center;margin-bottom:6px}
+.logo[hidden]{display:none}
+.logo img{display:block;width:auto;height:auto;max-width:min(220px,60vw);max-height:130px;object-fit:contain;animation:fan .9s cubic-bezier(.2,.8,.2,1) both}
+@keyframes fan{from{opacity:0;transform:translateY(20px) scale(.8)}}
 .btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;max-width:340px;min-height:52px;padding:0 20px;border:0;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;cursor:pointer;transition:background .3s,color .3s}
 .ig{background:linear-gradient(135deg,#F58529,#DD2A7B 55%,#8134AF);color:#fff}
 .mn{background:var(--lemon);color:#14282b}
@@ -64,4 +63,4 @@ body.land{--ink:#fff;--mut:#B8D3D6;min-height:100svh;background:radial-gradient(
 .hint{min-height:20px;margin:0;color:#B8D3D6;font-size:13px}
 .skip{background:none;border:0;color:#B8D3D6;text-decoration:underline;cursor:pointer;padding:0;font-size:13px}
 .mid .cr{margin-top:12px;padding:0 0 calc(12px + env(safe-area-inset-bottom))}
-@media (prefers-reduced-motion:reduce){.fan img,dialog[open]{animation:none}html{scroll-behavior:auto}}
+@media (prefers-reduced-motion:reduce){.logo img,dialog[open]{animation:none}html{scroll-behavior:auto}}

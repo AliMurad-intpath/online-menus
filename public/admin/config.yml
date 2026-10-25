@@ -22,6 +22,7 @@ collections:
             fields:
               - {label: Name (English), name: name_en, widget: string}
               - {label: Name (Arabic), name: name_ar, widget: string}
+              - {label: Logo, name: logo, widget: image, required: false, media_folder: "/public/images", public_folder: "/images", hint: "Shown on the home page. A transparent PNG or SVG works best. Leave empty to show no logo."}
               - {label: Tagline (English), name: tagline_en, widget: string, required: false}
               - {label: Tagline (Arabic), name: tagline_ar, widget: string, required: false}
               - {label: Instagram username (no @), name: instagram, widget: string}
