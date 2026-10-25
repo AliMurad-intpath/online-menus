@@ -8,8 +8,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/style.css"></head>
 <body>
-<header class="top"><div><h1 id="nm"></h1><p id="tg" class="tg"></p></div><button id="lng" class="lng"></button></header>
-<div class="sw"><input id="q" class="q" type="search"></div>
+<header id="bar" class="bar">
+ <button id="lng" class="lng" type="button"></button>
+ <a id="ig" class="btn ig" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span id="igT"></span></a>
+</header>
+<div class="hero"><img id="lg" class="lg" alt="" hidden><div><h1 id="nm"></h1><p id="tg" class="tg"></p></div></div>
+<div class="sw"><input id="q" class="q" type="search" enterkeyhint="search" autocomplete="off"></div>
 <section id="pop" hidden><h2 id="popT" class="sec-h"></h2><div id="snap" class="snap"></div></section>
 <nav id="cats" class="cats"></nav>
 <main id="list"></main>

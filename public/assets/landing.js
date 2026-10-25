@@ -7,7 +7,7 @@ function key(){return "ig_"+MN.data.restaurant.instagram;}
 function render(){
  var D=MN.data,R=D.restaurant,lock=R.lock!==false,open=ok||!lock;
  $("nm").textContent=MN.pick(R,"name");$("tg").textContent=MN.pick(R,"tagline");document.title=MN.pick(R,"name");
- $("lng").textContent=MN.lang()==="ar"?"EN":"عربي";
+ $("lng").textContent=MN.lang()==="ar"?"EN":"عربي";$("lng").setAttribute("aria-label",MN.t("switchTo"));
  $("igT").textContent=MN.t("follow");$("mnT").textContent=MN.t("menu");$("sk").textContent=MN.t("skip");
  $("ig").href="https://www.instagram.com/"+encodeURIComponent(R.instagram)+"/";
  var m=$("mn");m.classList.toggle("locked",!open);m.setAttribute("aria-disabled",String(!open));
