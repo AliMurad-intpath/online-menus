@@ -1,0 +1,91 @@
+# Copyright (c) 2026 Integrated Path for IT Solutions. All rights reserved.
+backend:
+  name: github
+  repo: YOUR-GITHUB-USER/online-menus   # change this
+  branch: main
+local_backend: true                   # lets you test with `npx decap-server`
+media_folder: public/images/dishes
+public_folder: /images/dishes
+
+collections:
+  - name: menu
+    label: Menu
+    files:
+      - name: menu
+        label: Menu content
+        file: public/content/menu.json
+        format: json
+        fields:
+          - label: Restaurant
+            name: restaurant
+            widget: object
+            fields:
+              - {label: Name (English), name: name_en, widget: string}
+              - {label: Name (Arabic), name: name_ar, widget: string}
+              - {label: Tagline (English), name: tagline_en, widget: string, required: false}
+              - {label: Tagline (Arabic), name: tagline_ar, widget: string, required: false}
+              - {label: Instagram username (no @), name: instagram, widget: string}
+              - {label: Currency symbol (English), name: currency_en, widget: string, default: "$"}
+              - {label: Currency symbol (Arabic), name: currency_ar, widget: string, default: "$"}
+              - {label: Lock the menu button until the guest follows, name: lock, widget: boolean, default: true}
+              - {label: Show a "skip" link, name: skip, widget: boolean, default: true}
+          - label: Categories
+            name: categories
+            widget: list
+            summary: "{{fields.name_en}} / {{fields.name_ar}}"
+            fields:
+              - {label: Short code (lowercase, no spaces, never change it later), name: id, widget: string, pattern: ["^[a-z0-9-]+$", "Lowercase letters, numbers and dashes only"]}
+              - {label: Name (English), name: name_en, widget: string}
+              - {label: Name (Arabic), name: name_ar, widget: string}
+          - label: Dishes
+            name: items
+            widget: list
+            summary: "{{fields.name_en}} · {{fields.price}}"
+            fields:
+              - label: Category
+                name: category
+                widget: relation
+                collection: menu
+                file: menu
+                search_fields: ["categories.*.name_en"]
+                value_field: "categories.*.id"
+                display_fields: ["categories.*.name_en"]
+              - {label: Name (English), name: name_en, widget: string}
+              - {label: Name (Arabic), name: name_ar, widget: string}
+              - {label: Description (English), name: desc_en, widget: text, required: false}
+              - {label: Description (Arabic), name: desc_ar, widget: text, required: false}
+              - {label: Price, name: price, widget: number, value_type: float, min: 0}
+              - {label: Photo, name: image, widget: image, required: false}
+              - label: Labels
+                name: tags
+                widget: select
+                multiple: true
+                required: false
+                options: [{label: Vegan, value: vegan}, {label: Vegetarian, value: vegetarian}, {label: Gluten-free, value: glutenfree}, {label: Spicy, value: spicy}, {label: New, value: new}]
+              - label: Allergens
+                name: allergens
+                widget: select
+                multiple: true
+                required: false
+                options: [{label: Gluten, value: gluten}, {label: Dairy, value: dairy}, {label: Eggs, value: eggs}, {label: Nuts, value: nuts}, {label: Peanuts, value: peanuts}, {label: Fish, value: fish}, {label: Shellfish, value: shellfish}, {label: Soy, value: soy}, {label: Sesame, value: sesame}]
+              - {label: Available today, name: available, widget: boolean, default: true}
+              - {label: Show in "Popular", name: popular, widget: boolean, default: false}
+
+  - name: recipes
+    label: Recipes (private)
+    folder: private/recipes
+    create: true
+    extension: yml
+    format: yaml
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    fields:
+      - {label: Dish name, name: title, widget: string}
+      - {label: Portions this recipe makes, name: portions, widget: number, default: 1}
+      - label: Ingredients
+        name: ingredients
+        widget: list
+        fields:
+          - {label: Ingredient and amount, name: name, widget: string}
+          - {label: Cost, name: cost, widget: number, value_type: float}
+      - {label: Preparation steps, name: steps, widget: text, required: false}

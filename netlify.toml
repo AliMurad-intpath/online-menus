@@ -1,0 +1,7 @@
+[build]
+  publish = "public"
+
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"

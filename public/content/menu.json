@@ -1,0 +1,21 @@
+{
+  "restaurant": {
+    "name_en": "Maison Olive", "name_ar": "ميزون أوليف",
+    "tagline_en": "Mediterranean kitchen", "tagline_ar": "مطبخ متوسطي",
+    "instagram": "yourrestaurant",
+    "currency_en": "$", "currency_ar": "$",
+    "lock": true, "skip": true
+  },
+  "categories": [
+    {"id": "starters", "name_en": "Starters", "name_ar": "المقبلات"},
+    {"id": "mains", "name_en": "Mains", "name_ar": "الأطباق الرئيسية"},
+    {"id": "desserts", "name_en": "Desserts", "name_ar": "الحلويات"},
+    {"id": "drinks", "name_en": "Drinks", "name_ar": "المشروبات"}
+  ],
+  "items": [
+    {"category": "starters", "name_en": "Burrata & Tomato", "name_ar": "بوراتا مع الطماطم", "desc_en": "Creamy burrata, heirloom tomatoes, basil oil.", "desc_ar": "جبنة بوراتا كريمية مع طماطم بلدية وزيت الريحان.", "price": 9.5, "image": "/images/dishes/burrata.svg", "tags": ["vegetarian"], "allergens": ["dairy"], "available": true, "popular": true},
+    {"category": "mains", "name_en": "Grilled Sea Bass", "name_ar": "سمك قاروص مشوي", "desc_en": "Lemon, capers and roasted fennel.", "desc_ar": "مع الليمون والكبار والشمر المحمّص.", "price": 22, "image": "/images/dishes/seabass.svg", "tags": ["glutenfree"], "allergens": ["fish"], "available": true, "popular": true},
+    {"category": "desserts", "name_en": "Olive Oil Cake", "name_ar": "كيكة زيت الزيتون", "desc_en": "Citrus glaze and whipped mascarpone.", "desc_ar": "بطبقة حمضيات وكريمة الماسكاربوني.", "price": 7, "image": "/images/dishes/cake.svg", "tags": ["new"], "allergens": ["gluten", "dairy", "eggs"], "available": true, "popular": true},
+    {"category": "drinks", "name_en": "Lemon & Mint", "name_ar": "ليمون بالنعناع", "desc_en": "Fresh-pressed, lightly sweet.", "desc_ar": "عصير طازج بحلاوة خفيفة.", "price": 4, "image": "/images/dishes/lemonade.svg", "tags": ["vegan"], "allergens": [], "available": true, "popular": false}
+  ]
+}
