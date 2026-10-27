@@ -43,7 +43,6 @@ function list(){
    if(!off&&MN.showLabels()&&i.tags&&i.tags.length){var lb=MN.label(i.tags[0]);if(lb)ph.appendChild(e("span","bdg",lb));}
    b.appendChild(ph);
    var t=e("span","ct");t.appendChild(e("b","",MN.pick(i,"name")));
-   if(MN.pick(i,"desc"))t.appendChild(e("span","ds",MN.pick(i,"desc")));
    t.appendChild(e("span","price",off?MN.t("soldOut"):MN.priceText(i)));b.appendChild(t);
    b.onclick=function(){openDish(i);};g.appendChild(b);
   });

@@ -37,15 +37,14 @@ h1{margin:0;font-size:clamp(28px,8vw,40px);line-height:1.25;font-weight:800}
 .cats button.on{background:var(--act);color:var(--on-act);border-color:transparent}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:0 var(--pad) 8px}
 @media (min-width:600px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-.card{display:flex;flex-direction:column;padding:0;overflow:hidden;background:var(--surf);border:1px solid var(--line);border-radius:18px;cursor:pointer;text-align:start;color:inherit;transition:transform .15s,border-color .2s}
+.card{min-width:0;display:flex;flex-direction:column;padding:0;overflow:hidden;background:var(--surf);border:1px solid var(--line);border-radius:18px;cursor:pointer;text-align:start;color:inherit;transition:transform .15s,border-color .2s}
 .card:active{transform:scale(.97)}
 @media (hover:hover){.card:hover{border-color:#5a2a22}}
-.ph{position:relative;display:flex;align-items:center;justify-content:center;aspect-ratio:1;padding:8%;background:radial-gradient(62% 62% at 50% 55%,rgba(242,138,27,.24),rgba(204,28,36,.08) 55%,transparent 74%)}
-.ph img{display:block;max-width:100%;max-height:100%;width:100%;height:100%;object-fit:contain;object-position:center;margin:auto}
+.ph{position:relative;display:block;width:100%;height:0;padding-top:100%;overflow:hidden;background:radial-gradient(62% 62% at 50% 55%,rgba(242,138,27,.24),rgba(204,28,36,.08) 55%,transparent 74%)}
+.ph img{position:absolute;top:8%;left:8%;width:84%;height:84%;display:block;object-fit:contain;object-position:center center}
 .bdg{display:inline-flex;align-items:center;justify-content:center;position:absolute;top:8px;inset-inline-start:8px;padding:2px 9px;min-height:22px;border-radius:6px;background:var(--red);color:#fff;font-size:12px;font-weight:700;line-height:1.3}
 .ct{display:flex;flex-direction:column;flex:1;padding:2px 12px 12px}
 .ct b{font-size:16px;line-height:1.4;font-weight:700}
-.ds{margin:2px 0 8px;color:var(--mut);font-size:13px;line-height:1.5}
 .ct .price{margin-top:auto;align-self:flex-start}
 .ct b+.price{margin-top:8px}
 .card.off{opacity:.55}.card.off .ph img{filter:grayscale(1)}
