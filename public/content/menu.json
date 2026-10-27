@@ -11,7 +11,7 @@
     "cover": "/images/cover.webp",
     "tagline_en": "Chicken and meat, smoked slowly over citrus wood",
     "name_en": "Smoker",
-    "skip": true,
+    "skip": false,
     "currency_ar": "د.ع"
   },
   "popup": {
