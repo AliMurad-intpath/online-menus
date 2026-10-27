@@ -1,800 +1,801 @@
 {
- "restaurant": {
-  "name_en": "Smoker",
-  "name_ar": "سموكر",
-  "tagline_en": "Chicken and meat, smoked slowly over citrus wood",
-  "tagline_ar": "دجاج ولحم مدخّن ببطء على حطب الحمضيات",
-  "lock": false,
-  "instagram": "yourrestaurant",
-  "currency_en": "IQD",
-  "currency_ar": "د.ع",
-  "skip": true,
-  "logo": "/images/logo.png",
-  "show_labels": true,
-  "cover": "/images/cover.webp"
- },
- "popup": {
-  "enabled": true,
-  "delay": 10,
-  "title_en": "Enjoying the menu?",
-  "title_ar": "أعجبتك القائمة؟",
-  "text_en": "Follow us on Instagram for new dishes, special offers and daily updates.",
-  "text_ar": "تابعنا على إنستغرام لتصلك أحدث الأطباق والعروض الخاصة.",
-  "button_en": "Follow us on Instagram",
-  "button_ar": "تابعنا على إنستغرام",
-  "later_en": "Maybe later",
-  "later_ar": "ربما لاحقاً"
- },
- "labels": [
-  {
-   "id": "vegan",
-   "name_en": "Vegan",
-   "name_ar": "نباتي بالكامل"
+  "restaurant": {
+    "show_labels": true,
+    "instagram_url": "https://www.instagram.com/smoker.iq",
+    "tagline_ar": "دجاج ولحم مدخّن ببطء على حطب الحمضيات",
+    "name_ar": "سموكر",
+    "lock": false,
+    "logo": "/images/logo.png",
+    "instagram": "yourrestaurant",
+    "currency_en": "IQD",
+    "cover": "/images/cover.webp",
+    "tagline_en": "Chicken and meat, smoked slowly over citrus wood",
+    "name_en": "Smoker",
+    "skip": true,
+    "currency_ar": "د.ع"
   },
-  {
-   "id": "vegetarian",
-   "name_en": "Vegetarian",
-   "name_ar": "نباتي"
+  "popup": {
+    "enabled": true,
+    "text_ar": "تابعنا على إنستغرام لتصلك أحدث الأطباق والعروض الخاصة.",
+    "delay": 10,
+    "later_ar": "ربما لاحقاً",
+    "title_en": "Enjoying the menu?",
+    "button_en": "Follow us on Instagram",
+    "title_ar": "أعجبتك القائمة؟",
+    "text_en": "Follow us on Instagram for new dishes, special offers and daily updates.",
+    "later_en": "Maybe later",
+    "button_ar": "تابعنا على إنستغرام"
   },
-  {
-   "id": "glutenfree",
-   "name_en": "Gluten-free",
-   "name_ar": "خالٍ من الغلوتين"
-  },
-  {
-   "id": "spicy",
-   "name_en": "Spicy",
-   "name_ar": "حار"
-  },
-  {
-   "id": "new",
-   "name_en": "New",
-   "name_ar": "جديد"
-  },
-  {
-   "id": "preorder",
-   "name_en": "Order 1 day ahead",
-   "name_ar": "يُطلب قبل يوم"
-  }
- ],
- "categories": [
-  {
-   "id": "chicken",
-   "name_en": "Chicken",
-   "name_ar": "الدجاج"
-  },
-  {
-   "id": "smoked",
-   "name_en": "Smoked meat",
-   "name_ar": "اللحم المدخّن"
-  },
-  {
-   "id": "vine-leaves",
-   "name_en": "Vine leaves",
-   "name_ar": "ورق العنب"
-  },
-  {
-   "id": "starters",
-   "name_en": "Starters",
-   "name_ar": "المقبلات"
-  },
-  {
-   "id": "rice",
-   "name_en": "Rice",
-   "name_ar": "أطباق الرز"
-  },
-  {
-   "id": "sauces",
-   "name_en": "Sauces",
-   "name_ar": "الصوصات"
-  },
-  {
-   "id": "drinks",
-   "name_en": "Drinks",
-   "name_ar": "المشروبات"
-  }
- ],
- "items": [
-  {
-   "category": "chicken",
-   "name_en": "Chicken Biryani",
-   "name_ar": "برياني دجاج",
-   "desc_en": "Served with yellow biryani rice",
-   "desc_ar": "تقدَّم مع رز برياني الأصفر",
-   "sizes": [
+  "labels": [
     {
-     "label_ar": "نصف حبة (700غ)",
-     "label_en": "Half chicken (700 g)",
-     "price": 14000
+      "id": "vegan",
+      "name_en": "Vegan",
+      "name_ar": "نباتي بالكامل"
     },
     {
-     "label_ar": "حبة كاملة (1400غ)",
-     "label_en": "Whole chicken (1400 g)",
-     "price": 25000
-    }
-   ],
-   "image": "/images/dishes/biryani-chicken.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "chicken",
-   "name_en": "Chicken with Macaroni",
-   "name_ar": "دجاج مع معكرونة",
-   "desc_en": "Smoker-style grilled chicken served on our special macaroni",
-   "desc_ar": "دجاج مشوي على طريقة سموكر يقدَّم على معكرونة خاصة",
-   "price": 13500,
-   "image": "/images/dishes/chicken-macaroni.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "chicken",
-   "name_en": "Rotisserie Chicken",
-   "name_ar": "دجاج شواية",
-   "sizes": [
-    {
-     "label_ar": "نصف حبة (700غ)",
-     "label_en": "Half chicken (700 g)",
-     "price": 13000
+      "id": "vegetarian",
+      "name_en": "Vegetarian",
+      "name_ar": "نباتي"
     },
     {
-     "label_ar": "حبة كاملة (1400غ)",
-     "label_en": "Whole chicken (1400 g)",
-     "price": 22000
-    }
-   ],
-   "image": "/images/dishes/shawaya-chicken.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "chicken",
-   "name_en": "Syrian-Style Grilled Chicken",
-   "name_ar": "دجاجة مشوية",
-   "desc_en": "Syrian-style grilled chicken served with garlic sauce and fries",
-   "desc_ar": "دجاجة مشوية على الطريقة السورية تُقدَّم مع ثومية وبطاطا",
-   "sizes": [
-    {
-     "label_ar": "نصف حبة (700غ)",
-     "label_en": "Half chicken (700 g)",
-     "price": 12000
+      "id": "glutenfree",
+      "name_en": "Gluten-free",
+      "name_ar": "خالٍ من الغلوتين"
     },
     {
-     "label_ar": "حبة كاملة (1400غ)",
-     "label_en": "Whole chicken (1400 g)",
-     "price": 20000
-    }
-   ],
-   "image": "/images/dishes/grilled-chicken-fries.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "chicken",
-   "name_en": "Chicken Tabsi",
-   "name_ar": "تبسي دجاج",
-   "desc_en": "Half a chicken (700 g) baked with vegetables",
-   "desc_ar": "نصف حبة دجاج وزن 700غ مع خضار",
-   "price": 15000,
-   "image": "/images/dishes/tabsi-chicken.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "chicken",
-   "name_en": "Chicken Maqluba",
-   "name_ar": "مقلوبة دجاج",
-   "sizes": [
-    {
-     "label_ar": "نصف حبة (700غ)",
-     "label_en": "Half chicken (700 g)",
-     "price": 13000
+      "id": "spicy",
+      "name_en": "Spicy",
+      "name_ar": "حار"
     },
     {
-     "label_ar": "حبة كاملة (1400غ)",
-     "label_en": "Whole chicken (1400 g)",
-     "price": 22000
-    }
-   ],
-   "image": "/images/dishes/maqluba-chicken.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "chicken",
-   "name_en": "Chicken with Royal Rice",
-   "name_ar": "دجاج مع تمن ملكي",
-   "sizes": [
-    {
-     "label_ar": "نصف حبة (700غ)",
-     "label_en": "Half chicken (700 g)",
-     "price": 14000
+      "id": "new",
+      "name_en": "New",
+      "name_ar": "جديد"
     },
     {
-     "label_ar": "حبة كاملة (1400غ)",
-     "label_en": "Whole chicken (1400 g)",
-     "price": 25000
+      "id": "preorder",
+      "name_en": "Order 1 day ahead",
+      "name_ar": "يُطلب قبل يوم"
     }
-   ],
-   "image": "/images/dishes/chicken-royal-rice.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "smoked",
-   "name_en": "Smoked Meat Portion",
-   "name_ar": "بورشن لحم مدخن",
-   "desc_en": "Meat smoked for 8 hours, served with rice and sauces. Meat weight 400 g",
-   "desc_ar": "لحم مدخن 8 ساعات يُقدَّم مع الرز والصلصات، وزن اللحم 400غ",
-   "price": 23000,
-   "image": "/images/dishes/smoked-portion.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "smoked",
-   "name_en": "Smoked Neck",
-   "name_ar": "رقبة مدخنة",
-   "sizes": [
+  ],
+  "categories": [
     {
-     "label_ar": "نصف (600غ)",
-     "label_en": "Half (600 g)",
-     "price": 30000
+      "id": "chicken",
+      "name_en": "Chicken",
+      "name_ar": "الدجاج"
     },
     {
-     "label_ar": "كاملة (1200غ)",
-     "label_en": "Whole (1200 g)",
-     "price": 56000
-    }
-   ],
-   "image": "/images/dishes/smoked-neck.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "smoked",
-   "name_en": "Smoked Ribs",
-   "name_ar": "ضلع مدخن",
-   "sizes": [
-    {
-     "label_ar": "نصف (1000غ)",
-     "label_en": "Half (1000 g)",
-     "price": 48000
+      "id": "smoked",
+      "name_en": "Smoked meat",
+      "name_ar": "اللحم المدخّن"
     },
     {
-     "label_ar": "كاملة (3000غ)",
-     "label_en": "Whole (3000 g)",
-     "price": 120000
-    }
-   ],
-   "image": "/images/dishes/smoked-rib.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "smoked",
-   "name_en": "Smoked Shoulder",
-   "name_ar": "كتف مدخن",
-   "desc_en": "Weight 2500 g",
-   "desc_ar": "الوزن 2500غ",
-   "price": 100000,
-   "image": "/images/dishes/smoked-shoulder.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "smoked",
-   "name_en": "Smoked Meat Biryani",
-   "name_ar": "برياني لحم مدخن",
-   "desc_en": "400 g of smoked meat on yellow biryani rice",
-   "desc_ar": "قطعة لحم مدخن وزن 400غ تُقدَّم على رز برياني الأصفر",
-   "price": 24000,
-   "image": "/images/dishes/smoked-biryani.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "smoked",
-   "name_en": "Smoked Dolma",
-   "name_ar": "دولمة مدخنة",
-   "desc_en": "Iraqi dolma cooked with smoked rib meat",
-   "desc_ar": "دولمة عراقية مطبوخة بلحم الضلوع المدخّن",
-   "price": 23000,
-   "image": "/images/dishes/smoked-dolma.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "smoked",
-   "name_en": "Jordanian Mansaf",
-   "name_ar": "منسف أردني",
-   "desc_en": "750 g mansaf rice with 250 g meat cooked in jameed",
-   "desc_ar": "750غ رز منسف و250غ لحم مطبوخ مع جميد",
-   "price": 24000,
-   "image": "/images/dishes/mansaf.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "smoked",
-   "name_en": "Smoked Shank",
-   "name_ar": "زند لحم",
-   "desc_en": "Smoked meat shank with 750 g milk rice",
-   "desc_ar": "قطعة زند لحم مدخنة مع 750غ رز حليب",
-   "price": 27000,
-   "image": "/images/dishes/lamb-shank.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "vine-leaves",
-   "name_en": "Vine Leaf Pot with Pomegranate",
-   "name_ar": "جدر ورق عنب رمان",
-   "desc_en": "A pot of 30 vine leaf rolls with pomegranate",
-   "desc_ar": "يحتوي الجدر على 30 حبة ورق عنب بالرمان",
-   "price": 23000,
-   "image": "/images/dishes/vine-leaf-pot.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "vine-leaves",
-   "name_en": "Rib Stuffed with Vine Leaves",
-   "name_ar": "ضلع محشي ورق عنب",
-   "desc_en": "Order this dish one day in advance. Weight 1000 g",
-   "desc_ar": "يُطلب هذا الطبق مسبقاً قبل يوم واحد. الوزن 1000غ",
-   "price": 60000,
-   "image": "/images/dishes/stuffed-rib.webp",
-   "tags": [
-    "preorder"
-   ],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "vine-leaves",
-   "name_en": "Shoulder Stuffed with Vine Leaves",
-   "name_ar": "كتف محشي ورق عنب",
-   "desc_en": "Order this dish one day in advance. Weight 2500 g",
-   "desc_ar": "يُطلب هذا الطبق مسبقاً قبل يوم واحد. الوزن 2500غ",
-   "price": 120000,
-   "image": "/images/dishes/stuffed-shoulder.webp",
-   "tags": [
-    "preorder"
-   ],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "starters",
-   "name_en": "Rice Kibbeh",
-   "name_ar": "كبة تمن",
-   "price": 6000,
-   "image": "/images/dishes/kibbeh-timman.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "starters",
-   "name_en": "Kibbeh Seray",
-   "name_ar": "كبة سراي",
-   "price": 6000,
-   "image": "/images/dishes/kibbeh-seray.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "starters",
-   "name_en": "Crescent Kibbeh",
-   "name_ar": "كبة هلالية",
-   "price": 3500,
-   "image": "/images/dishes/kibbeh-hilaliya.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "starters",
-   "name_en": "Fried Kibbeh",
-   "name_ar": "كبة مقلية",
-   "price": 6000,
-   "image": "/images/dishes/fried-kibbeh.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "starters",
-   "name_en": "Potato Chap",
-   "name_ar": "بتيتة جاب",
-   "price": 6000,
-   "image": "/images/dishes/batata-jab.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "starters",
-   "name_en": "Chicken Musakhan",
-   "name_ar": "مسخن دجاج",
-   "price": 5000,
-   "image": "/images/dishes/chicken-musakhan.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "starters",
-   "name_en": "Meat Burek",
-   "name_ar": "برك لحمة",
-   "price": 5500,
-   "image": "/images/dishes/meat-burek.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "starters",
-   "name_en": "Cheese Burek",
-   "name_ar": "برك جبنة",
-   "price": 5000,
-   "image": "/images/dishes/cheese-burek.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "starters",
-   "name_en": "Crispy Vine Leaves",
-   "name_ar": "ورق عنب مقرمش",
-   "price": 7000,
-   "image": "/images/dishes/crispy-vine-leaves.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "starters",
-   "name_en": "Vine Leaves",
-   "name_ar": "ورق عنب",
-   "price": 4000,
-   "image": "/images/dishes/vine-leaves.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "starters",
-   "name_en": "Tabbouleh",
-   "name_ar": "تبولة",
-   "price": 4000,
-   "image": "/images/dishes/tabbouleh.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "starters",
-   "name_en": "Fattoush",
-   "name_ar": "فتوش",
-   "price": 4000,
-   "image": "/images/dishes/fattoush.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "starters",
-   "name_en": "Rocket Salad",
-   "name_ar": "سلطة جرجير",
-   "price": 4500,
-   "image": "/images/dishes/rocket-salad.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "starters",
-   "name_en": "Caesar Salad",
-   "name_ar": "سلطة سيزر",
-   "price": 6000,
-   "image": "/images/dishes/caesar-salad.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "starters",
-   "name_en": "Hummus",
-   "name_ar": "حمص",
-   "price": 3000,
-   "image": "/images/dishes/hummus.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "rice",
-   "name_en": "Red Rice",
-   "name_ar": "رز أحمر",
-   "sizes": [
-    {
-     "label_ar": "400 غ",
-     "label_en": "400 g",
-     "price": 2000
+      "id": "vine-leaves",
+      "name_en": "Vine leaves",
+      "name_ar": "ورق العنب"
     },
     {
-     "label_ar": "1000 غ",
-     "label_en": "1000 g",
-     "price": 3000
-    }
-   ],
-   "image": "/images/dishes/red-rice.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "rice",
-   "name_en": "Smoked Rice",
-   "name_ar": "رز مدخن",
-   "sizes": [
-    {
-     "label_ar": "400 غ",
-     "label_en": "400 g",
-     "price": 2000
+      "id": "starters",
+      "name_en": "Starters",
+      "name_ar": "المقبلات"
     },
     {
-     "label_ar": "1000 غ",
-     "label_en": "1000 g",
-     "price": 3000
-    }
-   ],
-   "image": "/images/dishes/smoked-rice.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "rice",
-   "name_en": "Shaabi Rice",
-   "name_ar": "رز شعبي",
-   "sizes": [
-    {
-     "label_ar": "400 غ",
-     "label_en": "400 g",
-     "price": 2000
+      "id": "rice",
+      "name_en": "Rice",
+      "name_ar": "أطباق الرز"
     },
     {
-     "label_ar": "1000 غ",
-     "label_en": "1000 g",
-     "price": 3000
-    }
-   ],
-   "image": "/images/dishes/shaabi-rice.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "rice",
-   "name_en": "Milk Rice",
-   "name_ar": "رز بالحليب",
-   "sizes": [
-    {
-     "label_ar": "400 غ",
-     "label_en": "400 g",
-     "price": 2500
+      "id": "sauces",
+      "name_en": "Sauces",
+      "name_ar": "الصوصات"
     },
     {
-     "label_ar": "1000 غ",
-     "label_en": "1000 g",
-     "price": 3500
+      "id": "drinks",
+      "name_en": "Drinks",
+      "name_ar": "المشروبات"
     }
-   ],
-   "image": "/images/dishes/milk-rice.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "rice",
-   "name_en": "Biryani Rice",
-   "name_ar": "رز برياني",
-   "sizes": [
+  ],
+  "items": [
     {
-     "label_ar": "400 غ",
-     "label_en": "400 g",
-     "price": 2500
+      "name_ar": "برياني دجاج",
+      "available": true,
+      "allergens": [],
+      "sizes": [
+        {
+          "label_ar": "نصف حبة (700غ)",
+          "label_en": "Half chicken (700 g)",
+          "price": 14000
+        },
+        {
+          "label_ar": "حبة كاملة (1400غ)",
+          "label_en": "Whole chicken (1400 g)",
+          "price": 25000
+        }
+      ],
+      "desc_en": "Served with yellow biryani rice",
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/biryani-chicken.webp",
+      "name_en": "Chicken Biryani",
+      "category": "chicken",
+      "desc_ar": "تقدَّم مع رز برياني الأصفر"
     },
     {
-     "label_ar": "1000 غ",
-     "label_en": "1000 g",
-     "price": 3500
+      "name_ar": "دجاج مع معكرونة",
+      "price": 13500,
+      "available": true,
+      "allergens": [],
+      "desc_en": "Smoker-style grilled chicken served on our special macaroni",
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/chicken-macaroni.webp",
+      "name_en": "Chicken with Macaroni",
+      "category": "chicken",
+      "desc_ar": "دجاج مشوي على طريقة سموكر يقدَّم على معكرونة خاصة"
+    },
+    {
+      "name_ar": "دجاج شواية",
+      "available": true,
+      "allergens": [],
+      "sizes": [
+        {
+          "label_ar": "نصف حبة (700غ)",
+          "label_en": "Half chicken (700 g)",
+          "price": 13000
+        },
+        {
+          "label_ar": "حبة كاملة (1400غ)",
+          "label_en": "Whole chicken (1400 g)",
+          "price": 22000
+        }
+      ],
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/shawaya-chicken.webp",
+      "name_en": "Rotisserie Chicken",
+      "category": "chicken"
+    },
+    {
+      "name_ar": "دجاجة مشوية",
+      "available": true,
+      "allergens": [],
+      "sizes": [
+        {
+          "label_ar": "نصف حبة (700غ)",
+          "label_en": "Half chicken (700 g)",
+          "price": 12000
+        },
+        {
+          "label_ar": "حبة كاملة (1400غ)",
+          "label_en": "Whole chicken (1400 g)",
+          "price": 20000
+        }
+      ],
+      "desc_en": "Syrian-style grilled chicken served with garlic sauce and fries",
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/grilled-chicken-fries.webp",
+      "name_en": "Syrian-Style Grilled Chicken",
+      "category": "chicken",
+      "desc_ar": "دجاجة مشوية على الطريقة السورية تُقدَّم مع ثومية وبطاطا"
+    },
+    {
+      "name_ar": "تبسي دجاج",
+      "price": 15000,
+      "available": true,
+      "allergens": [],
+      "desc_en": "Half a chicken (700 g) baked with vegetables",
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/tabsi-chicken.webp",
+      "name_en": "Chicken Tabsi",
+      "category": "chicken",
+      "desc_ar": "نصف حبة دجاج وزن 700غ مع خضار"
+    },
+    {
+      "name_ar": "مقلوبة دجاج",
+      "available": true,
+      "allergens": [],
+      "sizes": [
+        {
+          "label_ar": "نصف حبة (700غ)",
+          "label_en": "Half chicken (700 g)",
+          "price": 13000
+        },
+        {
+          "label_ar": "حبة كاملة (1400غ)",
+          "label_en": "Whole chicken (1400 g)",
+          "price": 22000
+        }
+      ],
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/maqluba-chicken.webp",
+      "name_en": "Chicken Maqluba",
+      "category": "chicken"
+    },
+    {
+      "name_ar": "دجاج مع تمن ملكي",
+      "available": true,
+      "allergens": [],
+      "sizes": [
+        {
+          "label_ar": "نصف حبة (700غ)",
+          "label_en": "Half chicken (700 g)",
+          "price": 14000
+        },
+        {
+          "label_ar": "حبة كاملة (1400غ)",
+          "label_en": "Whole chicken (1400 g)",
+          "price": 25000
+        }
+      ],
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/chicken-royal-rice.webp",
+      "name_en": "Chicken with Royal Rice",
+      "category": "chicken"
+    },
+    {
+      "name_ar": "بورشن لحم مدخن",
+      "price": 23000,
+      "available": true,
+      "allergens": [],
+      "desc_en": "Meat smoked for 8 hours, served with rice and sauces. Meat weight 400 g",
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/smoked-portion.webp",
+      "name_en": "Smoked Meat Portion",
+      "category": "smoked",
+      "desc_ar": "لحم مدخن 8 ساعات يُقدَّم مع الرز والصلصات، وزن اللحم 400غ"
+    },
+    {
+      "name_ar": "رقبة مدخنة",
+      "available": true,
+      "allergens": [],
+      "sizes": [
+        {
+          "label_ar": "نصف (600غ)",
+          "label_en": "Half (600 g)",
+          "price": 30000
+        },
+        {
+          "label_ar": "كاملة (1200غ)",
+          "label_en": "Whole (1200 g)",
+          "price": 56000
+        }
+      ],
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/smoked-neck.webp",
+      "name_en": "Smoked Neck",
+      "category": "smoked"
+    },
+    {
+      "name_ar": "ضلع مدخن",
+      "available": true,
+      "allergens": [],
+      "sizes": [
+        {
+          "label_ar": "نصف (1000غ)",
+          "label_en": "Half (1000 g)",
+          "price": 48000
+        },
+        {
+          "label_ar": "كاملة (3000غ)",
+          "label_en": "Whole (3000 g)",
+          "price": 120000
+        }
+      ],
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/smoked-rib.webp",
+      "name_en": "Smoked Ribs",
+      "category": "smoked"
+    },
+    {
+      "name_ar": "كتف مدخن",
+      "price": 100000,
+      "available": true,
+      "allergens": [],
+      "desc_en": "Weight 2500 g",
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/smoked-shoulder.webp",
+      "name_en": "Smoked Shoulder",
+      "category": "smoked",
+      "desc_ar": "الوزن 2500غ"
+    },
+    {
+      "name_ar": "برياني لحم مدخن",
+      "price": 24000,
+      "available": true,
+      "allergens": [],
+      "desc_en": "400 g of smoked meat on yellow biryani rice",
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/smoked-biryani.webp",
+      "name_en": "Smoked Meat Biryani",
+      "category": "smoked",
+      "desc_ar": "قطعة لحم مدخن وزن 400غ تُقدَّم على رز برياني الأصفر"
+    },
+    {
+      "name_ar": "دولمة مدخنة",
+      "price": 23000,
+      "available": true,
+      "allergens": [],
+      "desc_en": "Iraqi dolma cooked with smoked rib meat",
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/smoked-dolma.webp",
+      "name_en": "Smoked Dolma",
+      "category": "smoked",
+      "desc_ar": "دولمة عراقية مطبوخة بلحم الضلوع المدخّن"
+    },
+    {
+      "name_ar": "منسف أردني",
+      "price": 24000,
+      "available": true,
+      "allergens": [],
+      "desc_en": "750 g mansaf rice with 250 g meat cooked in jameed",
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/mansaf.webp",
+      "name_en": "Jordanian Mansaf",
+      "category": "smoked",
+      "desc_ar": "750غ رز منسف و250غ لحم مطبوخ مع جميد"
+    },
+    {
+      "name_ar": "زند لحم",
+      "price": 27000,
+      "available": true,
+      "allergens": [],
+      "desc_en": "Smoked meat shank with 750 g milk rice",
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/lamb-shank.webp",
+      "name_en": "Smoked Shank",
+      "category": "smoked",
+      "desc_ar": "قطعة زند لحم مدخنة مع 750غ رز حليب"
+    },
+    {
+      "name_ar": "جدر ورق عنب رمان",
+      "price": 23000,
+      "available": true,
+      "allergens": [],
+      "desc_en": "A pot of 30 vine leaf rolls with pomegranate",
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/vine-leaf-pot.webp",
+      "name_en": "Vine Leaf Pot with Pomegranate",
+      "category": "vine-leaves",
+      "desc_ar": "يحتوي الجدر على 30 حبة ورق عنب بالرمان"
+    },
+    {
+      "name_ar": "ضلع محشي ورق عنب",
+      "price": 60000,
+      "available": true,
+      "allergens": [],
+      "desc_en": "Order this dish one day in advance. Weight 1000 g",
+      "tags": [
+        "preorder"
+      ],
+      "popular": false,
+      "image": "/images/dishes/stuffed-rib.webp",
+      "name_en": "Rib Stuffed with Vine Leaves",
+      "category": "vine-leaves",
+      "desc_ar": "يُطلب هذا الطبق مسبقاً قبل يوم واحد. الوزن 1000غ"
+    },
+    {
+      "name_ar": "كتف محشي ورق عنب",
+      "price": 120000,
+      "available": true,
+      "allergens": [],
+      "desc_en": "Order this dish one day in advance. Weight 2500 g",
+      "tags": [
+        "preorder"
+      ],
+      "popular": false,
+      "image": "/images/dishes/stuffed-shoulder.webp",
+      "name_en": "Shoulder Stuffed with Vine Leaves",
+      "category": "vine-leaves",
+      "desc_ar": "يُطلب هذا الطبق مسبقاً قبل يوم واحد. الوزن 2500غ"
+    },
+    {
+      "name_ar": "كبة تمن",
+      "price": 6000,
+      "available": true,
+      "allergens": [],
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/kibbeh-timman.webp",
+      "name_en": "Rice Kibbeh",
+      "category": "starters"
+    },
+    {
+      "name_ar": "كبة سراي",
+      "price": 6000,
+      "available": true,
+      "allergens": [],
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/kibbeh-seray.webp",
+      "name_en": "Kibbeh Seray",
+      "category": "starters"
+    },
+    {
+      "name_ar": "كبة هلالية",
+      "price": 3500,
+      "available": true,
+      "allergens": [],
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/kibbeh-hilaliya.webp",
+      "name_en": "Crescent Kibbeh",
+      "category": "starters"
+    },
+    {
+      "name_ar": "كبة مقلية",
+      "price": 6000,
+      "available": true,
+      "allergens": [],
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/fried-kibbeh.webp",
+      "name_en": "Fried Kibbeh",
+      "category": "starters"
+    },
+    {
+      "name_ar": "بتيتة جاب",
+      "price": 6000,
+      "available": true,
+      "allergens": [],
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/batata-jab.webp",
+      "name_en": "Potato Chap",
+      "category": "starters"
+    },
+    {
+      "name_ar": "مسخن دجاج",
+      "price": 5000,
+      "available": true,
+      "allergens": [],
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/chicken-musakhan.webp",
+      "name_en": "Chicken Musakhan",
+      "category": "starters"
+    },
+    {
+      "name_ar": "برك لحمة",
+      "price": 5500,
+      "available": true,
+      "allergens": [],
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/meat-burek.webp",
+      "name_en": "Meat Burek",
+      "category": "starters"
+    },
+    {
+      "name_ar": "برك جبنة",
+      "price": 5000,
+      "available": true,
+      "allergens": [],
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/cheese-burek.webp",
+      "name_en": "Cheese Burek",
+      "category": "starters"
+    },
+    {
+      "name_ar": "ورق عنب مقرمش",
+      "price": 7000,
+      "available": true,
+      "allergens": [],
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/crispy-vine-leaves.webp",
+      "name_en": "Crispy Vine Leaves",
+      "category": "starters"
+    },
+    {
+      "name_ar": "ورق عنب",
+      "price": 4000,
+      "available": true,
+      "allergens": [],
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/vine-leaves.webp",
+      "name_en": "Vine Leaves",
+      "category": "starters"
+    },
+    {
+      "name_ar": "تبولة",
+      "price": 4000,
+      "available": true,
+      "allergens": [],
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/tabbouleh.webp",
+      "name_en": "Tabbouleh",
+      "category": "starters"
+    },
+    {
+      "name_ar": "فتوش",
+      "price": 4000,
+      "available": true,
+      "allergens": [],
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/fattoush.webp",
+      "name_en": "Fattoush",
+      "category": "starters"
+    },
+    {
+      "name_ar": "سلطة جرجير",
+      "price": 4500,
+      "available": true,
+      "allergens": [],
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/rocket-salad.webp",
+      "name_en": "Rocket Salad",
+      "category": "starters"
+    },
+    {
+      "name_ar": "سلطة سيزر",
+      "price": 6000,
+      "available": true,
+      "allergens": [],
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/caesar-salad.webp",
+      "name_en": "Caesar Salad",
+      "category": "starters"
+    },
+    {
+      "name_ar": "حمص",
+      "price": 3000,
+      "available": true,
+      "allergens": [],
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/hummus.webp",
+      "name_en": "Hummus",
+      "category": "starters"
+    },
+    {
+      "name_ar": "رز أحمر",
+      "available": true,
+      "allergens": [],
+      "sizes": [
+        {
+          "label_ar": "400 غ",
+          "label_en": "400 g",
+          "price": 2000
+        },
+        {
+          "label_ar": "1000 غ",
+          "label_en": "1000 g",
+          "price": 3000
+        }
+      ],
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/red-rice.webp",
+      "name_en": "Red Rice",
+      "category": "rice"
+    },
+    {
+      "name_ar": "رز مدخن",
+      "available": true,
+      "allergens": [],
+      "sizes": [
+        {
+          "label_ar": "400 غ",
+          "label_en": "400 g",
+          "price": 2000
+        },
+        {
+          "label_ar": "1000 غ",
+          "label_en": "1000 g",
+          "price": 3000
+        }
+      ],
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/smoked-rice.webp",
+      "name_en": "Smoked Rice",
+      "category": "rice"
+    },
+    {
+      "name_ar": "رز شعبي",
+      "available": true,
+      "allergens": [],
+      "sizes": [
+        {
+          "label_ar": "400 غ",
+          "label_en": "400 g",
+          "price": 2000
+        },
+        {
+          "label_ar": "1000 غ",
+          "label_en": "1000 g",
+          "price": 3000
+        }
+      ],
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/shaabi-rice.webp",
+      "name_en": "Shaabi Rice",
+      "category": "rice"
+    },
+    {
+      "name_ar": "رز بالحليب",
+      "available": true,
+      "allergens": [],
+      "sizes": [
+        {
+          "label_ar": "400 غ",
+          "label_en": "400 g",
+          "price": 2500
+        },
+        {
+          "label_ar": "1000 غ",
+          "label_en": "1000 g",
+          "price": 3500
+        }
+      ],
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/milk-rice.webp",
+      "name_en": "Milk Rice",
+      "category": "rice"
+    },
+    {
+      "name_ar": "رز برياني",
+      "available": true,
+      "allergens": [],
+      "sizes": [
+        {
+          "label_ar": "400 غ",
+          "label_en": "400 g",
+          "price": 2500
+        },
+        {
+          "label_ar": "1000 غ",
+          "label_en": "1000 g",
+          "price": 3500
+        }
+      ],
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/biryani-rice.webp",
+      "name_en": "Biryani Rice",
+      "category": "rice"
+    },
+    {
+      "name_ar": "عسل",
+      "price": 1000,
+      "available": true,
+      "allergens": [],
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/honey.webp",
+      "name_en": "Honey",
+      "category": "sauces"
+    },
+    {
+      "name_ar": "روب",
+      "price": 500,
+      "available": true,
+      "allergens": [],
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/yogurt.webp",
+      "name_en": "Yogurt",
+      "category": "sauces"
+    },
+    {
+      "name_ar": "دقوس",
+      "price": 500,
+      "available": true,
+      "allergens": [],
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/daqoos.webp",
+      "name_en": "Daqoos",
+      "category": "sauces"
+    },
+    {
+      "name_ar": "مرق تبسي",
+      "price": 2000,
+      "available": true,
+      "allergens": [],
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/tabsi-broth.webp",
+      "name_en": "Tabsi Broth",
+      "category": "sauces"
+    },
+    {
+      "name_ar": "ليبيه",
+      "price": 500,
+      "available": true,
+      "allergens": [],
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/lebiya.webp",
+      "name_en": "Lebiya",
+      "category": "sauces"
+    },
+    {
+      "name_ar": "تشمي تشوري",
+      "price": 1000,
+      "available": true,
+      "allergens": [],
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/chimichurri.webp",
+      "name_en": "Chimichurri",
+      "category": "sauces"
+    },
+    {
+      "name_ar": "بيبسي",
+      "price": 1000,
+      "available": true,
+      "allergens": [],
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/pepsi.webp",
+      "name_en": "Pepsi",
+      "category": "drinks"
+    },
+    {
+      "name_ar": "سفن",
+      "price": 1000,
+      "available": true,
+      "allergens": [],
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/seven-up.webp",
+      "name_en": "7UP",
+      "category": "drinks"
+    },
+    {
+      "name_ar": "ميرندا",
+      "price": 1000,
+      "available": true,
+      "allergens": [],
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/mirinda.webp",
+      "name_en": "Mirinda",
+      "category": "drinks"
+    },
+    {
+      "name_ar": "لبن",
+      "price": 1500,
+      "available": true,
+      "allergens": [],
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/laban.webp",
+      "name_en": "Laban",
+      "category": "drinks"
+    },
+    {
+      "name_ar": "ماء",
+      "price": 500,
+      "available": true,
+      "allergens": [],
+      "tags": [],
+      "popular": false,
+      "image": "/images/dishes/water.webp",
+      "name_en": "Water",
+      "category": "drinks"
     }
-   ],
-   "image": "/images/dishes/biryani-rice.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "sauces",
-   "name_en": "Honey",
-   "name_ar": "عسل",
-   "price": 1000,
-   "image": "/images/dishes/honey.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "sauces",
-   "name_en": "Yogurt",
-   "name_ar": "روب",
-   "price": 500,
-   "image": "/images/dishes/yogurt.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "sauces",
-   "name_en": "Daqoos",
-   "name_ar": "دقوس",
-   "price": 500,
-   "image": "/images/dishes/daqoos.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "sauces",
-   "name_en": "Tabsi Broth",
-   "name_ar": "مرق تبسي",
-   "price": 2000,
-   "image": "/images/dishes/tabsi-broth.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "sauces",
-   "name_en": "Lebiya",
-   "name_ar": "ليبيه",
-   "price": 500,
-   "image": "/images/dishes/lebiya.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "sauces",
-   "name_en": "Chimichurri",
-   "name_ar": "تشمي تشوري",
-   "price": 1000,
-   "image": "/images/dishes/chimichurri.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "drinks",
-   "name_en": "Pepsi",
-   "name_ar": "بيبسي",
-   "price": 1000,
-   "image": "/images/dishes/pepsi.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "drinks",
-   "name_en": "7UP",
-   "name_ar": "سفن",
-   "price": 1000,
-   "image": "/images/dishes/seven-up.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "drinks",
-   "name_en": "Mirinda",
-   "name_ar": "ميرندا",
-   "price": 1000,
-   "image": "/images/dishes/mirinda.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "drinks",
-   "name_en": "Laban",
-   "name_ar": "لبن",
-   "price": 1500,
-   "image": "/images/dishes/laban.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  },
-  {
-   "category": "drinks",
-   "name_en": "Water",
-   "name_ar": "ماء",
-   "price": 500,
-   "image": "/images/dishes/water.webp",
-   "tags": [],
-   "allergens": [],
-   "popular": false,
-   "available": true
-  }
- ]
+  ]
 }
