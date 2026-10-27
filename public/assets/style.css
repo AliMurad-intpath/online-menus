@@ -75,7 +75,9 @@ body.land{--ink:#F6EEE6;--mut:#C9B9AB;height:100vh;height:100dvh;padding:0;overf
 body.land::before{content:"";position:fixed;inset:0;z-index:-2;background:var(--cover,none) center center/cover no-repeat}
 body.land::after{content:"";position:fixed;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(8,6,5,.88) 0%,rgba(8,6,5,.7) 40%,rgba(8,6,5,.5) 72%,rgba(8,6,5,.86) 100%)}
 .corner{position:absolute;top:calc(12px + env(safe-area-inset-top));inset-inline-start:14px;background:rgba(8,6,5,.55);border-color:rgba(255,255,255,.22);color:#fff;z-index:2}
-.mid{position:relative;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:64px 20px;text-align:center;overflow-y:auto}
+.mid{position:relative;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:10px;padding:64px 20px;text-align:center;overflow-y:auto}
+.mid::before,.mid::after{content:"";flex:none}
+.mid::before{margin-top:auto}.mid::after{margin-bottom:auto}
 .mid h1{font-family:var(--dsp)}
 .mid .tg{margin:-4px 0 10px;max-width:30ch}
 .logo{display:flex;justify-content:center;margin-bottom:8px}
@@ -100,4 +102,9 @@ dialog.pp[open]{animation:pop .22s cubic-bezier(.2,.8,.2,1)}
 .pp p{margin:0 0 18px;color:var(--mut)}
 .pp .btn{max-width:none}
 .pp .later{display:flex;align-items:center;justify-content:center;width:100%;min-height:44px;margin-top:6px;border:0;background:none;color:var(--mut);font-weight:700;text-decoration:underline;cursor:pointer}
+.igw{position:relative;flex:none;width:min(100%,340px);aspect-ratio:1;margin-top:10px;border-radius:20px;overflow:hidden;background:var(--surf);border:1px solid var(--line)}
+.igw[hidden]{display:none}
+.igw iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:transparent}
+.igw-ph{position:absolute;inset:0;display:grid;place-items:center;color:var(--mut);font-weight:700;direction:ltr}
+body.land.has-igw .mid .cr{position:static;margin-top:6px;padding:0 0 calc(12px + env(safe-area-inset-bottom))}
 @media (prefers-reduced-motion:reduce){.logo img,dialog[open],dialog.pp[open]{animation:none}html{scroll-behavior:auto}}

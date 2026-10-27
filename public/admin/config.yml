@@ -27,6 +27,7 @@ collections:
               - {label: Tagline (English), name: tagline_en, widget: string, required: false}
               - {label: Tagline (Arabic), name: tagline_ar, widget: string, required: false}
               - {label: Instagram username (no @), name: instagram, widget: string}
+              - {label: Instagram profile link (home page widget), name: instagram_url, widget: string, required: false, hint: "Optional. Paste the link of your public Instagram profile, for example https://www.instagram.com/yourpage/ and a square Instagram box appears on the home page. Leave empty to hide it. Embedding must be allowed on the Instagram account."}
               - {label: Currency symbol (English), name: currency_en, widget: string, default: "$"}
               - {label: Currency symbol (Arabic), name: currency_ar, widget: string, default: "$"}
               - {label: Lock the menu button until the guest follows, name: lock, widget: boolean, default: true}
