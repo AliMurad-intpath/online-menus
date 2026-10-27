@@ -23,6 +23,7 @@ collections:
               - {label: Name (English), name: name_en, widget: string}
               - {label: Name (Arabic), name: name_ar, widget: string}
               - {label: Logo, name: logo, widget: image, required: false, media_folder: "/public/images", public_folder: "/images", hint: "Shown on the home page. A transparent PNG or SVG works best. Leave empty to show no logo."}
+              - {label: Home page background photo, name: cover, widget: image, required: false, media_folder: "/public/images", public_folder: "/images", hint: "Optional. A dark, portrait photo works best."}
               - {label: Tagline (English), name: tagline_en, widget: string, required: false}
               - {label: Tagline (Arabic), name: tagline_ar, widget: string, required: false}
               - {label: Instagram username (no @), name: instagram, widget: string}
@@ -68,7 +69,7 @@ collections:
           - label: Dishes
             name: items
             widget: list
-            summary: "{{fields.name_en}} · {{fields.price}}"
+            summary: "{{fields.name_en}} / {{fields.name_ar}}"
             fields:
               - label: Category
                 name: category
@@ -82,8 +83,19 @@ collections:
               - {label: Name (Arabic), name: name_ar, widget: string}
               - {label: Description (English), name: desc_en, widget: text, required: false}
               - {label: Description (Arabic), name: desc_ar, widget: text, required: false}
-              - {label: Price, name: price, widget: number, value_type: float, min: 0}
-              - {label: Photo, name: image, widget: image, required: false, hint: "Any JPG or PNG up to about 2 MB. The site resizes it automatically. To replace it, click Choose different image."}
+              - {label: Price, name: price, widget: number, value_type: float, min: 0, required: false, hint: "Leave empty if the dish has sizes below."}
+              - label: Sizes
+                name: sizes
+                widget: list
+                required: false
+                collapsed: true
+                summary: "{{fields.label_en}} · {{fields.price}}"
+                hint: "Optional. For dishes sold in more than one size (half / whole). When used, the menu shows 'From' the lowest price."
+                fields:
+                  - {label: Size (English), name: label_en, widget: string}
+                  - {label: Size (Arabic), name: label_ar, widget: string}
+                  - {label: Price, name: price, widget: number, value_type: float, min: 0}
+              - {label: Photo, name: image, widget: image, required: false, hint: "Any JPG or PNG up to about 2 MB. A transparent PNG or WebP of a round plate looks best. The site resizes it automatically. To replace it, click Choose different image."}
               - label: Labels
                 name: tags
                 widget: relation

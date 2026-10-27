@@ -22,6 +22,7 @@ function render(){
   if(im.getAttribute("src")!==R.logo)im.src=R.logo;
   L.hidden=false;
  }else{L.hidden=true;}
+ if(R.cover)document.body.style.setProperty("--cover","url("+R.cover+")");
 }
 function unlock(){if(!MN.data)return;var lock=MN.data.restaurant.lock!==false;if(!lock||ok||!pend||Date.now()-pend<2500)return;ok=true;just=true;pend=0;try{localStorage.setItem(key(),"1");}catch(e){}render();}
 $("ig").addEventListener("click",function(){pend=Date.now();});
